@@ -16,6 +16,22 @@ function fibonacci(n) {
      */
     // PLACE YOUR CODE BETWEEN THIS...
 
+    let prevPrevValue = 0;
+    let prevValue = 1;
+    let currValue;
+    if(n == 0)
+        nThFibonacci = 0;
+    else if(n == 1)
+        nThFibonacci = 1;
+    else{
+        for(let i = 2;i <= n;i++){
+            currentValue = prevValue + prevPrevValue;
+            prevValue = currValue;
+            prevPrevValue = prevValue;
+        }
+        nThFibonacci = currValue;
+    }
+
     // ...AND THIS COMMENT LINE!
     return nThFibonacci;
 }
