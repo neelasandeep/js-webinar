@@ -30,6 +30,8 @@ function grade(score) {
         gradeOfStudent = 3;
     else if(score >=60)
         gradeOfStudent = 2;
+    else if(score<0 && score >100)
+        gradeOfStudent=0;
     else
         gradeOfStudent = 1;
 

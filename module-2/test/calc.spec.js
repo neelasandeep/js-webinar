@@ -17,5 +17,8 @@ describe.only('calc', () => {
      *     .times(6).v // 24
      */
     // TODO: write test cases to test calculator
+    it('should display proper inpuy',()=>{
+        expect(calc(3).v).to.equal(3);
+    });
 
 });
