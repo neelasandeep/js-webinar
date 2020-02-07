@@ -88,7 +88,7 @@ describe.only('calc', () => {
         //given
         const c=calc(3);
         //when +then
-        c.add(7).minus(3).times(4);
+        c.add(7).minus(4).times(4);
         
         //then
         expect(c.v).to.equal(24);
