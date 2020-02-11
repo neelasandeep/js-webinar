@@ -25,8 +25,11 @@ class Element {
         if (!name) {
             return element(this.locator);
         }
-
-     return element(this.children[name].locator);
+        let subchild = this.children;
+        if (subchild[name].name === name)
+            return element(subchild[name].locator);
+        else
+        subchild = subchild.chidren;
     }
 }
 module.exports = (Element);

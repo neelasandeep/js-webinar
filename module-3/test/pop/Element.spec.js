@@ -77,7 +77,7 @@ describe('Element Class', () => {
         });
     });
 
-    describe.only('Get', () => {
+    describe('Get', () => {
         it('should have method to retrieve root element', () => {
             const element = new Element('Body', {css: 'body'});
 
