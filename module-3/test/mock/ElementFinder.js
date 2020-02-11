@@ -1,4 +1,4 @@
-'use strict';
+
 
 const ElementArrayFinder = require('./ElementArrayFinder');
 

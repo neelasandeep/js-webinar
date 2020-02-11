@@ -2,7 +2,7 @@ const ElementFinder = require('../mock/ElementFinder');
 const Element = require('../../pop/Element');
 const expect = require('chai').expect;
 
-describe.only('Element Class', () => {
+describe('Element Class', () => {
     beforeEach(() => {
         global.element = ElementFinder.element;
     });
@@ -70,14 +70,14 @@ describe.only('Element Class', () => {
 
         it('should not add children twice', () => {
             const element = new Element('Body', {css: 'body'});
-            const child = new Element('Title', {css: 'h1'});
-
+            const child = new Element('italee', {css: 'h1'});
+              
             element.addChildren(child);
             expect(() => element.addChildren(child)).to.throw();
         });
     });
 
-    describe('Get', () => {
+    describe.only('Get', () => {
         it('should have method to retrieve root element', () => {
             const element = new Element('Body', {css: 'body'});
 
@@ -86,6 +86,7 @@ describe.only('Element Class', () => {
             const pElement = element.get();
 
             expect(pElement).to.be.instanceOf(ElementFinder);
+           
             expect(pElement.locator().css).to.equal('body');
         });
 
@@ -97,6 +98,7 @@ describe.only('Element Class', () => {
             const pElement = element.get('Title');
 
             expect(pElement).to.be.instanceOf(ElementFinder);
+        
             expect(pElement.locator().css).to.equal('h1');
         });
 
