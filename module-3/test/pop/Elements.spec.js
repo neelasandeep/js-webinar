@@ -75,6 +75,7 @@ describe('Elements Class', () => {
             const pElements = element.all();
 
             expect(pElements).to.be.instanceOf(ElementArrayFinder);
+           
             expect(pElements.locator().css).to.equal('body');
         });
     });

@@ -1,5 +1,5 @@
 
-const ElementFinder = require('../test/mock/ElementFinder');
+
 class Element {
     constructor(name, locator) {
         this.name = name;
@@ -8,10 +8,16 @@ class Element {
         this.children = {};
     }
     setParent(parent) {
-        this.parent = parent;
+        if(parent){
+            this.parent=parent;
+           
+        }
+        if(this.parent!==null)
+        throw new Error(`this ${child.name} already exists`);
     }
+    
     addChildren(child) {
-
+        
         if (this.children.hasOwnProperty(child.name)) {
 
             throw new Error(`this ${child.name} already exists`);
@@ -26,10 +32,13 @@ class Element {
             return element(this.locator);
         }
         let subchild = this.children;
-        if (subchild[name].name === name)
-            return element(subchild[name].locator);
-        else
-        subchild = subchild.chidren;
+        while (subchild[name].name !== name){
+          subchild = subchild.chidren;
+            }
+           
+    return element(subchild[name].locator);
+        
+       
     }
 }
 module.exports = (Element);
