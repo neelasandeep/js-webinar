@@ -4,7 +4,7 @@ const expect = require('chai').expect;
 const HomePage=require('../../pop/HomePage');
 const Element = require('../../pop/Element');
 
-describe.only('HomePage Class', () => {
+describe('HomePage Class', () => {
     // TODO: write tests
     beforeEach(() => {
         global.element = ElementFinder.element;
