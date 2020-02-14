@@ -11,7 +11,11 @@
  * @returns {boolean} true if the two arrays are equal,
  *                    false otherwise
  */
+
+
+
 function arrayEqual(arr1, arr2) {
+   
     let result=true;
     if(arr1.length!== arr2.length)
     {
